@@ -1,6 +1,6 @@
 # A sample Python project
 
-![](https://github.com/AlexandruValeanu/sampleproject/workflows/pythonpackage.yml/badge.svg)
+[![ActionsStatus](https://github.com/AlexandruValeanu/sampleproject/workflows/Python%20package/badge.svg)(https://github.com/AlexandruValeanu/sampleproject/actions)
 
 A sample project that exists as an aid to the [Python Packaging User
 Guide][packaging guide]'s [Tutorial on Packaging and Distributing
