@@ -4,4 +4,5 @@
 
 
 def test_success():
+    # Another useless comment
     assert True
