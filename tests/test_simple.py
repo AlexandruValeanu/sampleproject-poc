@@ -6,3 +6,7 @@
 def test_success():
     # Another useless comment...
     assert True
+
+def test_success_2():
+    # Another useless comment...
+    assert True
