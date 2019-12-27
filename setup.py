@@ -8,6 +8,10 @@ https://github.com/AlexandruValeanu/sampleproject
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 from os import path
+import itertools
+import pathlib
+import re
+
 # io.open is needed for projects that support Python 2.7
 # It ensures open() defaults to text mode with universal newlines,
 # and accepts an argument to specify the text encoding
@@ -20,6 +24,14 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
+directory = pathlib.Path(__file__).parent.resolve()
+    
+# version
+init_path = directory.joinpath('sampleproject', '__init__.py')
+text = init_path.read_text(encoding='utf-8-sig')
+pattern = re.compile(r"^__version__ = ['\"]([^'\"]*)['\"]", re.MULTILINE)
+version = pattern.search(text).group(1)
+    
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
 
@@ -43,7 +55,7 @@ setup(
     # For a discussion on single-sourcing the version across setup.py and the
     # project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version=find_version("package", "__init__.py"),  # Required
+    version=version,  # Required
 
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
