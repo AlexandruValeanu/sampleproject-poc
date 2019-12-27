@@ -47,8 +47,8 @@ setup(
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    name='sampleproject-POC',  # Required
-
+    name="sampleproject-pkg-alexandruvaleanu", # Replace with your own username
+    
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
     #
