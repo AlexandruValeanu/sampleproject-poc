@@ -2,7 +2,7 @@
 
 See:
 https://packaging.python.org/guides/distributing-packages-using-setuptools/
-https://github.com/AlexandruValeanu/sampleproject
+https://github.com/AlexandruValeanu/sampleproject-poc
 """
 
 # Always prefer setuptools over distutils
@@ -27,7 +27,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 directory = pathlib.Path(__file__).parent.resolve()
     
 # version
-init_path = directory.joinpath('sampleproject', '__init__.py')
+init_path = directory.joinpath('sampleproject-poc', '__init__.py')
 text = init_path.read_text(encoding='utf-8-sig')
 pattern = re.compile(r"^__version__ = ['\"]([^'\"]*)['\"]", re.MULTILINE)
 version = pattern.search(text).group(1)
@@ -40,14 +40,14 @@ setup(
     # package, this name will be registered for you. It will determine how
     # users can install this project, e.g.:
     #
-    # $ pip install sampleproject
+    # $ pip install sampleproject-poc
     #
-    # And where it will live on PyPI: https://pypi.org/project/sampleproject/
+    # And where it will live on PyPI: https://pypi.org/project/sampleproject-poc/
     #
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    name="sampleproject-pkg-alexandruvaleanu", # Replace with your own username
+    name="sampleproject-poc", # Replace with your own username
     
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
